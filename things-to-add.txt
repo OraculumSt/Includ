@@ -1,0 +1,41 @@
+Things to add
+
+1. Reading speed control: Add a slider to adjust the reading speed in real time.
+
+2. Text highlighting: Highlight the word or phrase being read at that moment on the web page.
+
+3. Text selection: Allow users to select only a specific part of the page to be read.
+
+4. Translations: Integrate a translation service to read text in a language other than the original language.
+
+5. Content Filter: Provide options to read only headlines, paragraphs or links on the page.
+
+6. High Contrast Mode: Add a button to activate a high contrast mode on the web page.
+
+7. Text Resizing: Allow users to increase or decrease the size of the text on the page.
+
+8. Image support: Implement a function to read alternative text (alt text) from images.
+
+9. Keyboard navigation: Improve page navigability using only the keyboard.
+
+10. Saving preferences: Allow users to save their favorite settings (voice, speed, etc.).
+
+11. Page summary: Creates a function that generates a short summary of the page content.
+
+12. Reading Mode: Implements a simplified view of the page, removing distracting elements.
+
+13. Support for mathematical formulas: Add the ability to correctly read mathematical formulas (e.g., MathML).
+
+14. Color customization: Allow users to customize text and background colors to improve readability.
+
+15. Built-in dictionary: Add a function to quickly look up the definition of unfamiliar words.
+
+16. PDF support: Extend the readability feature to PDF documents opened in the browser.
+
+17. Reading statistics: Provide statistics such as estimated reading time or text complexity.
+
+18. Support for tables: Improve reading and navigation of tables in web pages.
+
+19. Focus mode: Implement a feature that obscures irrelevant parts of the page to focus on the main content.
+
+20. Screen reader integration: Optimizes the extension to work well with common screen readers.
