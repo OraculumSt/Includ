@@ -14,3 +14,4 @@ You will be prompted to upload the folder containing the extension files, at thi
 Once the folder is uploaded the extension should appear in the list below. 
 
 
+![Screenshot 2024-08-06 145645](https://github.com/user-attachments/assets/8e081f8f-3118-4217-b177-51679dc8d28f)
