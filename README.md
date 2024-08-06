@@ -13,4 +13,4 @@ You will be prompted to upload the folder containing the extension files, at thi
 
 Once the folder is uploaded the extension should appear in the list below. 
 
-Translated with DeepL.com (free version)
+
