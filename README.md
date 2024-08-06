@@ -1,4 +1,6 @@
+![includ](https://github.com/user-attachments/assets/4959dd92-10c7-4056-bbb4-194a552a55c6)
 # Includ
+
 From the Oraculum-A11y team, an extension dedicated to the accessibility of the Internet world. This extension includes: - Automatic reading system - Automatic text detection system - Possibility to choose the desired language. Oraculum-A11y aims at full web accessibility for all. From the hearing-impaired to the visually-impaired.
 
 # How to Install the Exstension
