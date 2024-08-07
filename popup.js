@@ -53,6 +53,20 @@ document.getElementById('readPage').addEventListener('click', () => {
   });
 });
 
+function updateReadingStats() {
+  chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, {action: "getReadingStats"}, (response) => {
+      if (response) {
+        document.getElementById('wordCount').textContent = response.wordCount;
+        document.getElementById('estimatedTime').textContent = response.estimatedReadingTimeMinutes;
+      }
+    });
+  });
+}
+
+// Chiama updateReadingStats quando il popup viene aperto
+document.addEventListener('DOMContentLoaded', updateReadingStats);
+
 document.getElementById('stopReading').addEventListener('click', () => {
   chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
     chrome.tabs.sendMessage(tabs[0].id, {action: "stopReading"});

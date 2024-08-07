@@ -13,7 +13,6 @@
 </head>
 <body>
   <img class="logo" src="img/FO.png">
-  <center><h1>Includ - Web Helper</h1></center>
   
   <div class="menu">
     <label for="sectionSelect">Select Section:</label>
@@ -31,6 +30,11 @@
       <label for="speedSlider">Speed</label>
       <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
       <span id="speedValue">1x</span>
+    </div>
+
+    <div id="readingStats">
+      <p>Number of words: <span id="wordCount"></span></p>
+      <p>estimated reading time: <span id="estimatedTime"></span> minutes</p>
     </div>
 
     <button id="readPage">Read the page</button>
