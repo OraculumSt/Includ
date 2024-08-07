@@ -2,13 +2,20 @@
 <html>
 <head>
   <title>Includ</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
     <img class="logo" src="img/FO.png">
   <center><h1>Includ - Web Helper</h1></center>
   <center><p>Select the voice</p></center>
   <select id="voiceSelect"></select>
+
+  <div class="slider-container">
+    <label for="speedSlider">Speed</label>
+    <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+    <span id="speedValue">1x</span>
+  </div>
+
   <button id="readPage">Read the page</button>
   <button id="stopReading">Stop reading</button>
   <br>

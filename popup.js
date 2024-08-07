@@ -1,4 +1,5 @@
 let voices = [];
+let port = null;
 
 function populateVoiceList() {
   voices = speechSynthesis.getVoices();
@@ -19,32 +20,19 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-document.getElementById('readPage').addEventListener('click', () => {
-  const voiceSelect = document.getElementById('voiceSelect');
-  const selectedVoice = voices[voiceSelect.selectedIndex];
-  
-  chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, {
-      action: "readPage",
-      voice: {
-        name: selectedVoice.name,
-        lang: selectedVoice.lang
-      }
-    });
-  });
-});
+// Aggiunta dello slider per la velocità
+const speedSlider = document.getElementById('speedSlider');
+const speedValue = document.getElementById('speedValue');
 
-document.getElementById('stopReading').addEventListener('click', () => {
-  chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, {action: "stopReading"});
-  });
+speedSlider.addEventListener('input', () => {
+  const speed = speedSlider.value;
+  speedValue.textContent = `${speed}x`;
 });
-
-let port = null;
 
 document.getElementById('readPage').addEventListener('click', () => {
   const voiceSelect = document.getElementById('voiceSelect');
   const selectedVoice = voices[voiceSelect.selectedIndex];
+  const speed = parseFloat(speedSlider.value);
   
   chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
     port = chrome.tabs.connect(tabs[0].id, {name: "readingChannel"});
@@ -59,7 +47,8 @@ document.getElementById('readPage').addEventListener('click', () => {
       voice: {
         name: selectedVoice.name,
         lang: selectedVoice.lang
-      }
+      },
+      speed: speed
     });
   });
 });

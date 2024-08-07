@@ -1,0 +1,57 @@
+body {
+    width: 300px;
+    padding: 10px;
+    background-color: hsla(39, 97%, 56%, 0.788);
+  }
+  
+  select, button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+  }
+
+  .logo{
+    width: 80px;
+  }
+  
+  #stopReading {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border: 1px solid black;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+  
+  #currentText {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid black;
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .slider-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider-container label {
+    margin-right: 10px;
+  }
+  
+  #speedSlider {
+    flex-grow: 1;
+  }
+  
+  #speedValue {
+    margin-left: 10px;
+    min-width: 30px;
+    text-align: right;
+  }
