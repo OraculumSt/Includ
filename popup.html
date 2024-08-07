@@ -3,25 +3,53 @@
 <head>
   <title>Includ</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <style>
+    .hidden { display: none; }
+    .menu p { margin-bottom: 20px; cursor: pointer; display: inline-flex; margin-left: 15px; }
+    .menu p:hover { text-decoration: underline; }
+    .menu button { margin-right: 10px; }
+    .slider-container, #currentText, .contrast-container { margin-top: 20px; }
+  </style>
 </head>
 <body>
-    <img class="logo" src="img/FO.png">
+  <img class="logo" src="img/FO.png">
   <center><h1>Includ - Web Helper</h1></center>
-  <center><p>Select the voice</p></center>
-  <select id="voiceSelect"></select>
+  
+  <div class="menu">
+    <label for="sectionSelect">Select Section:</label>
+    <select id="sectionSelect">
+      <option value="readerSection">Automatic Reader</option>
+      <option value="contrastSection">Text Contrast</option>
+    </select>
+  </div>
+  
+  <div id="readerSection">
+    <center><p>Select the voice</p></center>
+    <select id="voiceSelect"></select>
 
-  <div class="slider-container">
-    <label for="speedSlider">Speed</label>
-    <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
-    <span id="speedValue">1x</span>
+    <div class="slider-container">
+      <label for="speedSlider">Speed</label>
+      <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+      <span id="speedValue">1x</span>
+    </div>
+
+    <button id="readPage">Read the page</button>
+    <button id="stopReading">Stop reading</button>
+    <br>
+    <hr width="200px">
+    <center><p>Page Text</p></center>
+    <div id="currentText"></div>
   </div>
 
-  <button id="readPage">Read the page</button>
-  <button id="stopReading">Stop reading</button>
-  <br>
-  <hr width="200px">
-  <center><p>Page Text</p></center>
-  <div id="currentText"></div>
+  <div id="contrastSection" class="hidden">
+    <center><p>Text Contrast Settings</p></center>
+    <div class="contrast-container">
+      <button id="highContrastBtn">High Contrast</button>
+      <button id="normalContrastBtn">Normal Contrast</button>
+    </div>
+  </div>
+
   <script src="popup.js"></script>
+  <script src="menu.js"></script>
 </body>
 </html>

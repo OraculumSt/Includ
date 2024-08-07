@@ -1,18 +1,18 @@
 {
   "manifest_version": 3,
   "name": "Includ",
-  "version": "1.0",
+  "version": "1.1",
   "description": "From the Oraculum-A11y team, an extension dedicated to the accessibility of the Internet world. This extension includes: - Automatic reading system - Automatic text detection system - Possibility to choose the desired language. Oraculum-A11y aims at full web accessibility for all. From the hearing-impaired to the visually-impaired. Join us to help others.",
   "icons": {
-    "16": "img/FO.png",
-    "32": "img/FO.png",
-    "48": "img/FO.png",
-    "128": "img/FO.png"
+    "16": "img/logo.png",
+    "32": "img/logo.png",
+    "48": "img/logo.png",
+    "128": "img/logo.png"
   },
   "action": {
     "default_icon": {
-      "16": "img/FO.png",
-      "32": "img/FO.png"
+      "16": "img/logo.png",
+      "32": "img/logo.png"
     },
     "default_popup": "popup.html"
   },
